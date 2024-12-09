@@ -138,18 +138,18 @@ function App() {
         camera={{ position: [7, 7, 7], fov: 45 }}
       >
         <Suspense fallback={null}>
-          {/* <Scene
+          <Scene
             position={modelProps.position}
             rotation={modelProps.rotation}
             scale={modelProps.scale}
             castShadow={true}
-          /> */}
-          <Model
+          />
+          {/* <Model
             position={[0, 0, 0]}
             rotation={[0, 0, 0]}
             scale={[1, 1, 1]}
             castShadow={true}
-          />
+          /> */}
         </Suspense>
 
         <ShadowPlane />
@@ -225,15 +225,5 @@ function StaticPointLight() {
     }
   }, [scene, camera]);
 
-  return (
-    <pointLight
-      ref={lightRef}
-      castShadow
-      position={[3, 6, 3]} // Fixed position in world space
-      intensity={30}
-      color="#ffffff"
-    />
-  );
+  ("nami [0, -9, 0] shadow plane ");
 }
-
-("nami [0, -9, 0] shadow plane ");
